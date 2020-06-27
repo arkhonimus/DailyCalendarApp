@@ -28,6 +28,20 @@ class DailyTableViewCell: UITableViewCell {
     func set(daily: Daily) {
         self.dailyName.text = daily.name
         self.dailyDescription.text = daily.description
+        self.dailyDateStart.text = setDate(dailyDate: daily.date_start)
+        self.dailyDateFinish.text = setDate(dailyDate: daily.date_finish)
+    }
+    
+    func setDate(dailyDate: Int) -> String {
+        let date = Date(timeIntervalSince1970: TimeInterval(dailyDate))
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "HH.mm"
+        
+        let dateString = dateFormatterGet.string(from: date)
+        
+        print(dateString)
+        
+        return dateString
     }
 
 }

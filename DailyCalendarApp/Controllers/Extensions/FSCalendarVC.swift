@@ -38,7 +38,11 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
         let dateFormatterGet = DateFormatter()
         dateFormatterGet.dateFormat = "yyyy-MM-dd"
         
-        filteredDailies = dailies.filter({ dateFormatterGet.string(from: Date(timeIntervalSince1970: TimeInterval($0.date_start))) == selectDate })
+        filteredDailies = dailies.filter({ 
+            let date = Date(timeIntervalSince1970: TimeInterval($0.date_start))
+            
+            return dateFormatterGet.string(from: date) == selectDate
+        })
         
         tableView.reloadData()
     }
