@@ -39,8 +39,6 @@ class DailyTableViewCell: UITableViewCell {
         
         let dateString = dateFormatterGet.string(from: date)
         
-        print(dateString)
-        
         return dateString
     }
 
