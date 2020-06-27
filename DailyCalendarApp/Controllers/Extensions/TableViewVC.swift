@@ -17,8 +17,12 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DailyTableViewCell
         let daily: Daily
-                
-        isSelectedDate ? (daily = dailies[indexPath.row]) : (daily = filteredDailies[indexPath.row])
+        
+        if isSelectedDate {
+            daily = dailies[indexPath.row]
+        } else {
+            daily = filteredDailies[indexPath.row]
+        }
         
         cell.set(daily: daily)
         
