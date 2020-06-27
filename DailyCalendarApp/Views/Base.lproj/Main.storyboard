@@ -34,23 +34,43 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-rT-aSp">
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-rT-aSp" userLabel="dailyData">
                                                     <rect key="frame" x="20" y="11" width="374" height="21"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="12.00 - 13.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6W-A3-fcn" userLabel="dailyDate">
-                                                            <rect key="frame" x="0.0" y="0.0" width="102" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="SUs-Rp-8dv" userLabel="dailyDate">
+                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="21"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9d-3b-3IZ" userLabel="dailyDateStart">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-rW-Niw" userLabel="tilda">
+                                                                    <rect key="frame" x="43" y="0.0" width="8" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="13.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6W-A3-fcn" userLabel="dailyDateFinish">
+                                                                    <rect key="frame" x="52" y="0.0" width="42" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обед" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-mO-9Ms" userLabel="dailyName">
-                                                            <rect key="frame" x="143" y="0.0" width="42.5" height="21"/>
+                                                            <rect key="frame" x="164.5" y="0.0" width="42.5" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сходить покушать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYq-9e-jmO" userLabel="dailyDescription">
-                                                            <rect key="frame" x="226.5" y="0.0" width="147.5" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сходить покушать Сходить покушать Сходить покушать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYq-9e-jmO" userLabel="dailyDescription">
+                                                            <rect key="frame" x="274" y="0.0" width="100" height="21"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="eQz-94-4iE"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -59,14 +79,15 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="cyc-rT-aSp" firstAttribute="leading" secondItem="o5f-cX-E1z" secondAttribute="leadingMargin" id="DPS-vA-6BN"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="cyc-rT-aSp" secondAttribute="bottom" id="Ytc-Ws-hgA"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="cyc-rT-aSp" secondAttribute="trailing" id="i2Z-Rw-qaq"/>
-                                                <constraint firstItem="cyc-rT-aSp" firstAttribute="top" secondItem="o5f-cX-E1z" secondAttribute="topMargin" id="odq-ZF-MxU"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="cyc-rT-aSp" secondAttribute="bottom" id="Ht6-nv-X0P"/>
+                                                <constraint firstItem="cyc-rT-aSp" firstAttribute="trailing" secondItem="o5f-cX-E1z" secondAttribute="trailingMargin" id="Rex-hg-jqi"/>
+                                                <constraint firstItem="cyc-rT-aSp" firstAttribute="leading" secondItem="o5f-cX-E1z" secondAttribute="leadingMargin" id="S7H-cn-FQe"/>
+                                                <constraint firstItem="cyc-rT-aSp" firstAttribute="top" secondItem="o5f-cX-E1z" secondAttribute="topMargin" id="dFw-lC-pni"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="dailyDate" destination="K6W-A3-fcn" id="eOa-9e-aYx"/>
+                                            <outlet property="dailyDateFinish" destination="K6W-A3-fcn" id="cpW-dx-Kvg"/>
+                                            <outlet property="dailyDateStart" destination="u9d-3b-3IZ" id="Gb8-Fp-S7o"/>
                                             <outlet property="dailyDescription" destination="IYq-9e-jmO" id="1d9-ly-o5r"/>
                                             <outlet property="dailyName" destination="Nw5-mO-9Ms" id="hc2-P0-FVM"/>
                                         </connections>
