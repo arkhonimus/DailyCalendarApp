@@ -9,7 +9,10 @@
 import UIKit
 
 class DailyTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var dailyDate: UILabel!
+    @IBOutlet weak var dailyName: UILabel!
+    @IBOutlet weak var dailyDescription: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,6 +22,11 @@ class DailyTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func set(daily: Daily) {
+        self.dailyName.text = daily.name
+        self.dailyDescription.text = daily.description
     }
 
 }

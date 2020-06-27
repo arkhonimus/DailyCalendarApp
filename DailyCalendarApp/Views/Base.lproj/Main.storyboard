@@ -27,7 +27,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Tga-hg-MTb">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Tga-hg-MTb" customClass="DailyTableViewCell" customModule="DailyCalendarApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tga-hg-MTb" id="o5f-cX-E1z">
@@ -65,6 +65,11 @@
                                                 <constraint firstItem="cyc-rT-aSp" firstAttribute="top" secondItem="o5f-cX-E1z" secondAttribute="topMargin" id="odq-ZF-MxU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dailyDate" destination="K6W-A3-fcn" id="eOa-9e-aYx"/>
+                                            <outlet property="dailyDescription" destination="IYq-9e-jmO" id="1d9-ly-o5r"/>
+                                            <outlet property="dailyName" destination="Nw5-mO-9Ms" id="hc2-P0-FVM"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

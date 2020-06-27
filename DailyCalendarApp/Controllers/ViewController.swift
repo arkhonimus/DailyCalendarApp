@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     
+    let dailiesList = Daily.getDailies()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,11 +58,15 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
 
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return dailiesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DailyTableViewCell
+        let daily: Daily
+        
+        daily = dailiesList[indexPath.row]
+        cell.set(daily: daily)
         
         return cell
     }
