@@ -1,0 +1,6 @@
+framework module Pods_DailyCalendarApp {
+  umbrella header "Pods-DailyCalendarApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
