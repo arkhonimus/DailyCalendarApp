@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     
-    let dailiesList = Daily.getDailies()
+    var dailiesList = Daily.getDailies()
+    var filterDaily = Daily.getDailies()
+    var isFilter = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +28,7 @@ class ViewController: UIViewController {
 
 }
 
+// MARK: FSCalendar
 extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
 //    func calendar(_ calendar: FSCalendar, titleFor date: Date) -> String? {
 //        return "Hello"
@@ -34,38 +37,71 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
 //    func calendar(_ calendar: FSCalendar, subtitleFor date: Date) -> String? {
 //        return "world"
 //    }
-//
-//    func calendar(_ calendar: FSCalendar, cellFor date: Date, at position: FSCalendarMonthPosition) -> FSCalendarCell {
-//        let cell = calendar.dequeueReusableCell(withIdentifier: "CELL", for: date, at: position)
-//
-//        return cell
-//    }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
-        print(date)
-        let selectDate = Int(date.timeIntervalSince1970)
-//        let dateFormatter = DateFormatter()
+        isFilter = false
+        let selectedDate = Int(date.timeIntervalSince1970)
+        let obrDate = Date(timeIntervalSince1970: TimeInterval(selectedDate))
         
-        print(selectDate)
         
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+        
+        let Date2 = dateFormatterGet.string(from: date)
+        let dDate = dateFormatterGet.string(from: obrDate)
+        
+//        if Date2 == dDate {
+//            print("hello")
+//        }
+        
+//        print(dDate)
+        
+        let test1 = dateFormatterGet.string(from: Date(timeIntervalSince1970: TimeInterval(1592996400)))
+        let test2 = dateFormatterGet.string(from: date)
+        print(test1)
+        print(test2)
+        
+        if test1 == test2 {
+            print("Hello")
+        }
+
+        filterContent(test2, dailies: dailiesList)
+        isFilter = true
     }
     
     func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
-        print(date)
-        return 3
+        return 1
     }
+    
+    func filterContent(_ selectDate: String, dailies: [Daily]) {
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+        
+        filterDaily = dailies.filter({ dateFormatterGet.string(from: Date(timeIntervalSince1970: TimeInterval($0.date_start))) == selectDate })
+        
+        tableView.reloadData()
+    }
+
 }
 
+// MARK: TableView
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dailiesList.count
+        return isFilter ? dailiesList.count : filterDaily.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DailyTableViewCell
         let daily: Daily
         
-        daily = dailiesList[indexPath.row]
+//        daily = dailiesList[indexPath.row]
+        
+        if isFilter {
+            daily = filterDaily[indexPath.row]
+        } else {
+            daily = dailiesList[indexPath.row]
+        }
+        
         cell.set(daily: daily)
         
         return cell
