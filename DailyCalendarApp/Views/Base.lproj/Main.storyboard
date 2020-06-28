@@ -128,10 +128,47 @@
                     <view key="view" contentMode="scaleToFill" id="JmO-6B-JEO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2Y-as-3Dg" userLabel="dailyInfoDate">
+                                <rect key="frame" x="30" y="256" width="354" height="365.5"/>
+                                <mutableString key="text">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции способствует подготовки и реализации систем массового участия. Повседневная практика показывает, что консультация с широким активом представляет собой интересный эксперимент проверки модели развития. С другой стороны начало повседневной работы по формированию позиции в значительной степени обуславливает создание существенных финансовых и административных условий. Не следует, однако забывать, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="13.00 - 14.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yed-lO-5X8" userLabel="dailyInfoDescription">
+                                <rect key="frame" x="30" y="193" width="354" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9O1-Lz-uxN" userLabel="dailyInfoName">
+                                <rect key="frame" x="30" y="118" width="354" height="41"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="5sd-69-2tZ" firstAttribute="trailing" secondItem="T2Y-as-3Dg" secondAttribute="trailing" constant="30" id="9kG-o7-gug"/>
+                            <constraint firstItem="T2Y-as-3Dg" firstAttribute="top" secondItem="yed-lO-5X8" secondAttribute="bottom" constant="34" id="CG6-C2-h9e"/>
+                            <constraint firstItem="9O1-Lz-uxN" firstAttribute="top" secondItem="5sd-69-2tZ" secondAttribute="top" constant="30" id="SP0-bO-dQ8"/>
+                            <constraint firstItem="yed-lO-5X8" firstAttribute="leading" secondItem="5sd-69-2tZ" secondAttribute="leading" constant="30" id="Vr3-1k-JAD"/>
+                            <constraint firstItem="5sd-69-2tZ" firstAttribute="trailing" secondItem="9O1-Lz-uxN" secondAttribute="trailing" constant="30" id="aAd-2n-w79"/>
+                            <constraint firstItem="5sd-69-2tZ" firstAttribute="trailing" secondItem="yed-lO-5X8" secondAttribute="trailing" constant="30" id="ehS-V9-GiX"/>
+                            <constraint firstItem="yed-lO-5X8" firstAttribute="top" secondItem="9O1-Lz-uxN" secondAttribute="bottom" constant="34" id="kb1-fT-lQt"/>
+                            <constraint firstItem="9O1-Lz-uxN" firstAttribute="leading" secondItem="5sd-69-2tZ" secondAttribute="leading" constant="30" id="sbE-nF-ZJ4"/>
+                            <constraint firstItem="T2Y-as-3Dg" firstAttribute="leading" secondItem="5sd-69-2tZ" secondAttribute="leading" constant="30" id="siK-NZ-4ZQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="5sd-69-2tZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="o8R-E7-gUE"/>
+                    <connections>
+                        <outlet property="dailyInfoDate" destination="T2Y-as-3Dg" id="lPm-uI-oTs"/>
+                        <outlet property="dailyInfoDescription" destination="yed-lO-5X8" id="AFG-MW-CTp"/>
+                        <outlet property="dailyInfoName" destination="9O1-Lz-uxN" id="R6g-fF-ObX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8Ee-xL-1E3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
