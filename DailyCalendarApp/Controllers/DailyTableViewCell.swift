@@ -14,32 +14,20 @@ class DailyTableViewCell: UITableViewCell {
     @IBOutlet weak var dailyDateStart: UILabel!
     @IBOutlet weak var dailyDateFinish: UILabel!
     
+    let DC = DateConverter.shared
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func set(daily: Daily) {
         self.dailyName.text = daily.name
         self.dailyDescription.text = daily.description
-        self.dailyDateStart.text = setDate(dailyDate: daily.date_start)
-        self.dailyDateFinish.text = setDate(dailyDate: daily.date_finish)
+        self.dailyDateStart.text = DC.setDate(dailyDate: daily.date_start)
+        self.dailyDateFinish.text = DC.setDate(dailyDate: daily.date_finish)
     }
-    
-    func setDate(dailyDate: Int) -> String {
-        let date = Date(timeIntervalSince1970: TimeInterval(dailyDate))
-        let dateFormatterGet = DateFormatter()
-        dateFormatterGet.dateFormat = "HH.mm"
-        
-        let dateString = dateFormatterGet.string(from: date)
-        
-        return dateString
-    }
-
 }

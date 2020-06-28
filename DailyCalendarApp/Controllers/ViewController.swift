@@ -14,13 +14,22 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let dailies = Daily.getDailies()
-    var filteredDailies = [Daily]()
-    var isSelectedDate = true
+    var filteredDailies: [Daily] = [Daily]()
+    var isSelectedDate: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         calendar.delegate = self
         tableView.tableFooterView = UIView()
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "dailyInfo" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let dailyInfo = segue.destination as! DailyInfoViewController
+                dailyInfo.daily = filteredDailies[indexPath.row]
+            }
+        }
     }
 }
