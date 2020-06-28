@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DailyCalendarApp-->
         <scene sceneID="fAv-kL-5py">
             <objects>
                 <viewController id="CXn-CV-Saf" customClass="ViewController" customModule="DailyCalendarApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,7 +23,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RCn-oy-ix9">
-                                <rect key="frame" x="0.0" y="456" width="414" height="440"/>
+                                <rect key="frame" x="0.0" y="463" width="414" height="433"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Tga-hg-MTb" customClass="DailyTableViewCell" customModule="DailyCalendarApp" customModuleProvider="target">
@@ -89,7 +89,7 @@
                                             <outlet property="dailyDateStart" destination="u9d-3b-3IZ" id="Gb8-Fp-S7o"/>
                                             <outlet property="dailyDescription" destination="IYq-9e-jmO" id="1d9-ly-o5r"/>
                                             <outlet property="dailyName" destination="Nw5-mO-9Ms" id="hc2-P0-FVM"/>
-                                            <segue destination="HeB-1h-97Q" kind="show" id="3po-Bf-Xp4"/>
+                                            <segue destination="HeB-1h-97Q" kind="show" identifier="dailyInfo" id="3po-Bf-Xp4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -102,7 +102,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="S5t-0J-9MR" firstAttribute="top" secondItem="T11-42-VfI" secondAttribute="top" id="7Oq-Vr-b0e"/>
-                            <constraint firstItem="RCn-oy-ix9" firstAttribute="top" secondItem="S5t-0J-9MR" secondAttribute="bottom" constant="8" id="Ble-Tc-Kpq"/>
+                            <constraint firstItem="RCn-oy-ix9" firstAttribute="top" secondItem="S5t-0J-9MR" secondAttribute="bottom" constant="15" id="Ble-Tc-Kpq"/>
                             <constraint firstItem="S5t-0J-9MR" firstAttribute="leading" secondItem="T11-42-VfI" secondAttribute="leading" id="Ew9-BL-I6q"/>
                             <constraint firstAttribute="bottom" secondItem="RCn-oy-ix9" secondAttribute="bottom" id="KUJ-J0-i9k"/>
                             <constraint firstItem="RCn-oy-ix9" firstAttribute="leading" secondItem="T11-42-VfI" secondAttribute="leading" id="QCs-eZ-lZY"/>
@@ -111,7 +111,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="T11-42-VfI"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Pgu-y4-OcO"/>
+                    <navigationItem key="navigationItem" title="DailyCalendarApp" id="Pgu-y4-OcO"/>
                     <connections>
                         <outlet property="calendar" destination="S5t-0J-9MR" id="6pd-Ke-fMC"/>
                         <outlet property="tableView" destination="RCn-oy-ix9" id="uDF-9Z-6iv"/>
@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="2418.840579710145" y="136.60714285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Daily Info View Controller-->
         <scene sceneID="xVZ-Jt-lHj">
             <objects>
-                <viewController id="HeB-1h-97Q" sceneMemberID="viewController">
+                <viewController id="HeB-1h-97Q" customClass="DailyInfoViewController" customModule="DailyCalendarApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JmO-6B-JEO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

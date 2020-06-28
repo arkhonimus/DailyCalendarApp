@@ -23,4 +23,13 @@ class ViewController: UIViewController {
         calendar.delegate = self
         tableView.tableFooterView = UIView()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "dailyInfo" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let dailyInfo = segue.destination as! DailyInfoViewController
+                dailyInfo.daily = dailies[indexPath.row]
+            }
+        }
+    }
 }

@@ -27,6 +27,7 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
         let selectDate = dateFormatterGet.string(from: date)
 
         filterDailiesForCalendar(selectDate, dailies: dailies)
+        
         isSelectedDate = false
     }
     
