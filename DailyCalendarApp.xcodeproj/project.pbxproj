@@ -17,6 +17,7 @@
 		1F410F1124A75617000B0285 /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F410F1024A75617000B0285 /* DailyModel.swift */; };
 		1F5F30B324A8A82400B54042 /* DailyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F30B224A8A82400B54042 /* DailyInfoViewController.swift */; };
 		1F7E185224A77B3C00A5903A /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7E185124A77B3C00A5903A /* DailyTableViewCell.swift */; };
+		1F98A9BD24A8C3A20028C8D0 /* DateConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98A9BC24A8C3A20028C8D0 /* DateConverter.swift */; };
 		1FA93CFA24A7AE9700F28CD8 /* FSCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA93CF924A7AE9700F28CD8 /* FSCalendarVC.swift */; };
 		1FA93CFC24A7AEC800F28CD8 /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA93CFB24A7AEC800F28CD8 /* TableViewVC.swift */; };
 		F220708BE8A19D002EA442FF /* Pods_DailyCalendarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C129DBA5730B979B9FBAE0A /* Pods_DailyCalendarApp.framework */; };
@@ -35,6 +36,7 @@
 		1F410F1024A75617000B0285 /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
 		1F5F30B224A8A82400B54042 /* DailyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInfoViewController.swift; sourceTree = "<group>"; };
 		1F7E185124A77B3C00A5903A /* DailyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
+		1F98A9BC24A8C3A20028C8D0 /* DateConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateConverter.swift; sourceTree = "<group>"; };
 		1FA93CF924A7AE9700F28CD8 /* FSCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarVC.swift; sourceTree = "<group>"; };
 		1FA93CFB24A7AEC800F28CD8 /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
 		352A377EE8CBC41A4F3239BF /* Pods-DailyCalendarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyCalendarApp.debug.xcconfig"; path = "Target Support Files/Pods-DailyCalendarApp/Pods-DailyCalendarApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -75,6 +77,7 @@
 		1F11B9F024A73CFF00B931AA /* DailyCalendarApp */ = {
 			isa = PBXGroup;
 			children = (
+				1F98A9BB24A8C38C0028C8D0 /* Shared */,
 				1F410F0E24A755F1000B0285 /* Models */,
 				1F410F0D24A755E6000B0285 /* Views */,
 				1F410F0F24A755F7000B0285 /* Controllers */,
@@ -121,6 +124,14 @@
 				1F11B9FA24A73CFF00B931AA /* DailyCalendarApp.xcdatamodeld */,
 			);
 			path = "Support files";
+			sourceTree = "<group>";
+		};
+		1F98A9BB24A8C38C0028C8D0 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				1F98A9BC24A8C3A20028C8D0 /* DateConverter.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		1FA93CF524A7AE2200F28CD8 /* Extensions */ = {
@@ -268,6 +279,7 @@
 				1F11B9F624A73CFF00B931AA /* ViewController.swift in Sources */,
 				1F5F30B324A8A82400B54042 /* DailyInfoViewController.swift in Sources */,
 				1FA93CFA24A7AE9700F28CD8 /* FSCalendarVC.swift in Sources */,
+				1F98A9BD24A8C3A20028C8D0 /* DateConverter.swift in Sources */,
 				1F7E185224A77B3C00A5903A /* DailyTableViewCell.swift in Sources */,
 				1F410F1124A75617000B0285 /* DailyModel.swift in Sources */,
 				1F11B9F224A73CFF00B931AA /* AppDelegate.swift in Sources */,
@@ -348,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -402,7 +414,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -420,6 +432,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFHT4A72L;
 				INFOPLIST_FILE = "DailyCalendarApp/Support files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -427,7 +440,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Vladislav-Klepikov.DailyCalendarApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -439,6 +452,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WDFHT4A72L;
 				INFOPLIST_FILE = "DailyCalendarApp/Support files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +460,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Vladislav-Klepikov.DailyCalendarApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

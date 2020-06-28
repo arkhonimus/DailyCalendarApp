@@ -165,8 +165,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="o8R-E7-gUE"/>
                     <connections>
-                        <outlet property="dailyInfoDate" destination="T2Y-as-3Dg" id="lPm-uI-oTs"/>
-                        <outlet property="dailyInfoDescription" destination="yed-lO-5X8" id="AFG-MW-CTp"/>
+                        <outlet property="dailyInfoDate" destination="yed-lO-5X8" id="8a8-J9-caE"/>
+                        <outlet property="dailyInfoDescription" destination="T2Y-as-3Dg" id="Jg5-et-Wce"/>
                         <outlet property="dailyInfoName" destination="9O1-Lz-uxN" id="R6g-fF-ObX"/>
                     </connections>
                 </viewController>

@@ -13,6 +13,8 @@ class DailyInfoViewController: UIViewController {
     @IBOutlet weak var dailyInfoDate: UILabel!
     @IBOutlet weak var dailyInfoDescription: UILabel!
     
+    let DC = DateConverter.shared
+    
     var daily: Daily = Daily(id: 0,
                              name: "",
                              description: "",
@@ -21,7 +23,10 @@ class DailyInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(daily)
+        
+        dailyInfoName.text = daily.name
+        dailyInfoDescription.text = daily.description
+        dailyInfoDate.text = DC.setDate(dailyDate: daily.date_start) + "-" + DC.setDate(dailyDate: daily.date_finish)
     }
 
 }

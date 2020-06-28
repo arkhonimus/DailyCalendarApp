@@ -14,8 +14,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     let dailies = Daily.getDailies()
-    var filteredDailies = [Daily]()
-    var isSelectedDate = true
+    var filteredDailies: [Daily] = [Daily]()
+    var isSelectedDate: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         if segue.identifier == "dailyInfo" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let dailyInfo = segue.destination as! DailyInfoViewController
-                dailyInfo.daily = dailies[indexPath.row]
+                dailyInfo.daily = filteredDailies[indexPath.row]
             }
         }
     }
