@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ONp-dU-e8S">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -27,48 +28,48 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Tga-hg-MTb" customClass="DailyTableViewCell" customModule="DailyCalendarApp" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tga-hg-MTb" id="o5f-cX-E1z">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="76"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" spacing="41" translatesAutoresizingMaskIntoConstraints="NO" id="cyc-rT-aSp" userLabel="dailyData">
-                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <rect key="frame" x="20" y="11" width="374" height="54"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="SUs-Rp-8dv" userLabel="dailyDate">
-                                                            <rect key="frame" x="0.0" y="0.0" width="94" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="110" height="54"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9d-3b-3IZ" userLabel="dailyDateStart">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9d-3b-3IZ" userLabel="dailyDateStart">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="50" height="54"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VGY-rW-Niw" userLabel="tilda">
-                                                                    <rect key="frame" x="43" y="0.0" width="8" height="21"/>
+                                                                    <rect key="frame" x="51" y="0.0" width="8" height="54"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="13.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6W-A3-fcn" userLabel="dailyDateFinish">
-                                                                    <rect key="frame" x="52" y="0.0" width="42" height="21"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6W-A3-fcn" userLabel="dailyDateFinish">
+                                                                    <rect key="frame" x="60" y="0.0" width="50" height="54"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Обед" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-mO-9Ms" userLabel="dailyName">
-                                                            <rect key="frame" x="164.5" y="0.0" width="42.5" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nw5-mO-9Ms" userLabel="dailyName">
+                                                            <rect key="frame" x="164.5" y="0.0" width="50" height="54"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Сходить покушать Сходить покушать Сходить покушать" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYq-9e-jmO" userLabel="dailyDescription">
-                                                            <rect key="frame" x="274" y="0.0" width="100" height="21"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYq-9e-jmO" userLabel="dailyDescription">
+                                                            <rect key="frame" x="274" y="0.0" width="100" height="54"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="100" id="eQz-94-4iE"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="eQz-94-4iE"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -89,7 +90,6 @@
                                             <outlet property="dailyDateStart" destination="u9d-3b-3IZ" id="Gb8-Fp-S7o"/>
                                             <outlet property="dailyDescription" destination="IYq-9e-jmO" id="1d9-ly-o5r"/>
                                             <outlet property="dailyName" destination="Nw5-mO-9Ms" id="hc2-P0-FVM"/>
-                                            <segue destination="HeB-1h-97Q" kind="show" identifier="dailyInfo" id="3po-Bf-Xp4"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -115,6 +115,7 @@
                     <connections>
                         <outlet property="calendar" destination="S5t-0J-9MR" id="6pd-Ke-fMC"/>
                         <outlet property="tableView" destination="RCn-oy-ix9" id="uDF-9Z-6iv"/>
+                        <segue destination="HeB-1h-97Q" kind="show" identifier="dailyInfo" id="KA3-d5-tED"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xnd-O1-ekY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -131,7 +132,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2Y-as-3Dg" userLabel="dailyInfoDate">
                                 <rect key="frame" x="30" y="256" width="354" height="365.5"/>
-                                <mutableString key="text">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции способствует подготовки и реализации систем массового участия. Повседневная практика показывает, что консультация с широким активом представляет собой интересный эксперимент проверки модели развития. С другой стороны начало повседневной работы по формированию позиции в значительной степени обуславливает создание существенных финансовых и административных условий. Не следует, однако забывать, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</mutableString>
+                                <string key="text">Идейные соображения высшего порядка, а также начало повседневной работы по формированию позиции способствует подготовки и реализации систем массового участия. Повседневная практика показывает, что консультация с широким активом представляет собой интересный эксперимент проверки модели развития. С другой стороны начало повседневной работы по формированию позиции в значительной степени обуславливает создание существенных финансовых и административных условий. Не следует, однако забывать, что рамки и место обучения кадров влечет за собой процесс внедрения и модернизации системы обучения кадров, соответствует насущным потребностям.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

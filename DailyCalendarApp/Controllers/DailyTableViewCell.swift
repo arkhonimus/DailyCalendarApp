@@ -14,7 +14,7 @@ class DailyTableViewCell: UITableViewCell {
     @IBOutlet weak var dailyDateStart: UILabel!
     @IBOutlet weak var dailyDateFinish: UILabel!
     
-    let DC = DateConverter.shared
+    let DH = DateHandler.shared
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,12 +22,5 @@ class DailyTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-    }
-    
-    func set(daily: Daily) {
-        self.dailyName.text = daily.name
-        self.dailyDescription.text = daily.description
-        self.dailyDateStart.text = DC.setDate(dailyDate: daily.date_start)
-        self.dailyDateFinish.text = DC.setDate(dailyDate: daily.date_finish)
     }
 }
