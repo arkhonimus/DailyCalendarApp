@@ -16,7 +16,7 @@ class DateHandler {
     func setDate(dailyDate: Int) -> String {
         let date = Date(timeIntervalSince1970: TimeInterval(dailyDate))
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH.mm"
+        dateFormatter.dateFormat = "HH"
         
         let dateString = dateFormatter.string(from: date)
         
@@ -26,12 +26,12 @@ class DateHandler {
     func timeConverter(time: Int) -> String {
         if "\(time)".count > 1 {
             if time == 24 {
-                return "00.00"
+                return "00"
             } else {
-                return "\(time).00"
+                return "\(time)"
             }
         } else {
-            return "0\(time).00"
+            return "0\(time)"
         }
     }
 }

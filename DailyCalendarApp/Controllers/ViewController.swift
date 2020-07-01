@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     var isSelectedDate: Bool = true
     
     var dailies: Results<Daily>!
-    var filteredDailies: [Daily] = [Daily]()
-    var dataDailies = Array(repeating: Daily(id: 0,
+    var eventsOfSelectedDay: [Daily] = [Daily]()
+    var eventsDaily = Array(repeating: Daily(id: 0,
                                              name: "",
                                              descriptionDaily: "",
                                              date_start: 0,
@@ -36,8 +36,8 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "dailyInfo" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let dailyInfo = segue.destination as! DailyInfoViewController
-                dailyInfo.daily = dataDailies[indexPath.row]
+                let dailyInfo = segue.destination as! InfoDailyViewController
+                dailyInfo.daily = eventsDaily[indexPath.row]
             }
         }
     }

@@ -10,7 +10,7 @@ import RealmSwift
 
 let realm = try! Realm()
 
-class StorageManager {
+class StorageManager {    
     static func saveObject(_ place: Daily) {
         try! realm.write {
             realm.add(place)

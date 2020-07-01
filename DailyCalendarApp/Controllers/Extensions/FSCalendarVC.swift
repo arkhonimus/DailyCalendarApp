@@ -40,7 +40,7 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
     
         
     func filterDailiesForCalendar(selectDate: String) {
-        filteredDailies = filterDailiesListDate(selectDate: selectDate)
+        eventsOfSelectedDay = filterDailiesListDate(selectDate: selectDate)
         tableView.reloadData()
     }
 

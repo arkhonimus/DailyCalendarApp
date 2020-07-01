@@ -11,7 +11,7 @@ import UIKit
 // MARK: TableView
 extension ViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataDailies.count
+        return eventsDaily.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -26,26 +26,26 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let dateStart = DH.timeConverter(time: indexPath.row)
         let dateFinish = DH.timeConverter(time: indexPath.row + 1)
         
-        filteredDailies.forEach({
+        eventsOfSelectedDay.forEach({
             if DH.setDate(dailyDate: $0.date_start) == dateStart {
                 daily = $0
             }
         })
         
         if !isSelectedDate {
-            dataDailies[indexPath.row] = daily
+            eventsDaily[indexPath.row] = daily
         }
         
         cell.dailyName.text = daily.name
         cell.dailyDescription.text = daily.descriptionDaily
-        cell.dailyDateStart.text = dateStart
-        cell.dailyDateFinish.text = dateFinish
+        cell.dailyDateStart.text = "\(dateStart).00"
+        cell.dailyDateFinish.text = "\(dateFinish).00"
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if dataDailies[indexPath.row].name.count > 0 {
+        if eventsDaily[indexPath.row].name.count > 0 {
             self.performSegue(withIdentifier: "dailyInfo", sender: self)
         } else {
             tableView.deselectRow(at: indexPath, animated: true)

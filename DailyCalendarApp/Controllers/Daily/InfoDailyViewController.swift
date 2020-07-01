@@ -26,7 +26,7 @@ class InfoDailyViewController: UIViewController {
  
         dailyInfoName.text = daily.name
         dailyInfoDescription.text = daily.descriptionDaily
-        dailyInfoDate.text =  "\(DC.setDate(dailyDate: daily.date_start)) - \(DC.setDate(dailyDate: daily.date_finish))"
+        dailyInfoDate.text =  "\(DC.setDate(dailyDate: daily.date_start)).00 - \(DC.setDate(dailyDate: daily.date_finish)).00"
     }
 
 }
