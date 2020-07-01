@@ -49,6 +49,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
             self.performSegue(withIdentifier: "dailyInfo", sender: self)
         } else {
             tableView.deselectRow(at: indexPath, animated: true)
+            showAlert(title: "Внимание", message: "На выбранное вами время - событий нет")
         }
     }
 }

@@ -17,6 +17,7 @@
 		1F410F1124A75617000B0285 /* DailyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F410F1024A75617000B0285 /* DailyModel.swift */; };
 		1F5F30B324A8A82400B54042 /* DailyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5F30B224A8A82400B54042 /* DailyInfoViewController.swift */; };
 		1F7E185224A77B3C00A5903A /* DailyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F7E185124A77B3C00A5903A /* DailyTableViewCell.swift */; };
+		1F959E8624ACE2D200383388 /* AuxiliaryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F959E8524ACE2D200383388 /* AuxiliaryService.swift */; };
 		1F98A9BD24A8C3A20028C8D0 /* DateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98A9BC24A8C3A20028C8D0 /* DateHandler.swift */; };
 		1FA93CFA24A7AE9700F28CD8 /* FSCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA93CF924A7AE9700F28CD8 /* FSCalendarVC.swift */; };
 		1FA93CFC24A7AEC800F28CD8 /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA93CFB24A7AEC800F28CD8 /* TableViewVC.swift */; };
@@ -37,6 +38,7 @@
 		1F410F1024A75617000B0285 /* DailyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyModel.swift; sourceTree = "<group>"; };
 		1F5F30B224A8A82400B54042 /* DailyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyInfoViewController.swift; sourceTree = "<group>"; };
 		1F7E185124A77B3C00A5903A /* DailyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTableViewCell.swift; sourceTree = "<group>"; };
+		1F959E8524ACE2D200383388 /* AuxiliaryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuxiliaryService.swift; sourceTree = "<group>"; };
 		1F98A9BC24A8C3A20028C8D0 /* DateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHandler.swift; sourceTree = "<group>"; };
 		1FA93CF924A7AE9700F28CD8 /* FSCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarVC.swift; sourceTree = "<group>"; };
 		1FA93CFB24A7AEC800F28CD8 /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 			children = (
 				1F98A9BC24A8C3A20028C8D0 /* DateHandler.swift */,
 				1FD2BFDA24AC8E10008FC75D /* storageManager.swift */,
+				1F959E8524ACE2D200383388 /* AuxiliaryService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -288,6 +291,7 @@
 				1FD2BFDB24AC8E10008FC75D /* storageManager.swift in Sources */,
 				1F11B9F224A73CFF00B931AA /* AppDelegate.swift in Sources */,
 				1F11B9F424A73CFF00B931AA /* SceneDelegate.swift in Sources */,
+				1F959E8624ACE2D200383388 /* AuxiliaryService.swift in Sources */,
 				1F11B9FC24A73CFF00B931AA /* DailyCalendarApp.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
