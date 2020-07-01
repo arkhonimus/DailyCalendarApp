@@ -18,7 +18,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DailyTableViewCell
         var daily = Daily(id: 0,
                           name: "",
-                          description: "",
+                          descriptionDaily: "",
                           date_start: 0,
                           date_finish: 0)
         let DH = DateHandler.shared
@@ -37,7 +37,7 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate {
         }
         
         cell.dailyName.text = daily.name
-        cell.dailyDescription.text = daily.description
+        cell.dailyDescription.text = daily.descriptionDaily
         cell.dailyDateStart.text = dateStart
         cell.dailyDateFinish.text = dateFinish
         

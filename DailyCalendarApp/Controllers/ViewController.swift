@@ -8,22 +8,27 @@
 
 import UIKit
 import FSCalendar
+import RealmSwift
 
 class ViewController: UIViewController {
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     
-    let dailies = Daily.getDailies()
-    var filteredDailies: [Daily] = [Daily]()
     var isSelectedDate: Bool = true
+    
+    var dailies: Results<Daily>!
+    var filteredDailies: [Daily] = [Daily]()
     var dataDailies = Array(repeating: Daily(id: 0,
                                              name: "",
-                                             description: "",
-                                             date_start: 0, date_finish: 0), count: 24)
+                                             descriptionDaily: "",
+                                             date_start: 0,
+                                             date_finish: 0), count: 24)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dailies = realm.objects(Daily.self)
+
         calendar.delegate = self
         tableView.tableFooterView = UIView()
     }

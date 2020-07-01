@@ -6,4 +6,5 @@ target 'DailyCalendarApp' do
   use_frameworks!
   # Pods for DailyCalendarApp
   pod 'FSCalendar'
+  pod 'RealmSwift'
 end

@@ -20,6 +20,7 @@
 		1F98A9BD24A8C3A20028C8D0 /* DateHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F98A9BC24A8C3A20028C8D0 /* DateHandler.swift */; };
 		1FA93CFA24A7AE9700F28CD8 /* FSCalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA93CF924A7AE9700F28CD8 /* FSCalendarVC.swift */; };
 		1FA93CFC24A7AEC800F28CD8 /* TableViewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FA93CFB24A7AEC800F28CD8 /* TableViewVC.swift */; };
+		1FD2BFDB24AC8E10008FC75D /* storageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD2BFDA24AC8E10008FC75D /* storageManager.swift */; };
 		F220708BE8A19D002EA442FF /* Pods_DailyCalendarApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C129DBA5730B979B9FBAE0A /* Pods_DailyCalendarApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		1F98A9BC24A8C3A20028C8D0 /* DateHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHandler.swift; sourceTree = "<group>"; };
 		1FA93CF924A7AE9700F28CD8 /* FSCalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FSCalendarVC.swift; sourceTree = "<group>"; };
 		1FA93CFB24A7AEC800F28CD8 /* TableViewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewVC.swift; sourceTree = "<group>"; };
+		1FD2BFDA24AC8E10008FC75D /* storageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = storageManager.swift; sourceTree = "<group>"; };
 		352A377EE8CBC41A4F3239BF /* Pods-DailyCalendarApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyCalendarApp.debug.xcconfig"; path = "Target Support Files/Pods-DailyCalendarApp/Pods-DailyCalendarApp.debug.xcconfig"; sourceTree = "<group>"; };
 		5DB90753A3BA1FF688C98FEA /* Pods-DailyCalendarApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DailyCalendarApp.release.xcconfig"; path = "Target Support Files/Pods-DailyCalendarApp/Pods-DailyCalendarApp.release.xcconfig"; sourceTree = "<group>"; };
 		6C129DBA5730B979B9FBAE0A /* Pods_DailyCalendarApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DailyCalendarApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,7 +79,7 @@
 		1F11B9F024A73CFF00B931AA /* DailyCalendarApp */ = {
 			isa = PBXGroup;
 			children = (
-				1F98A9BB24A8C38C0028C8D0 /* Shared */,
+				1F98A9BB24A8C38C0028C8D0 /* Helpers */,
 				1F410F0E24A755F1000B0285 /* Models */,
 				1F410F0D24A755E6000B0285 /* Views */,
 				1F410F0F24A755F7000B0285 /* Controllers */,
@@ -126,12 +128,13 @@
 			path = "Support files";
 			sourceTree = "<group>";
 		};
-		1F98A9BB24A8C38C0028C8D0 /* Shared */ = {
+		1F98A9BB24A8C38C0028C8D0 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				1F98A9BC24A8C3A20028C8D0 /* DateHandler.swift */,
+				1FD2BFDA24AC8E10008FC75D /* storageManager.swift */,
 			);
-			path = Shared;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		1FA93CF524A7AE2200F28CD8 /* Extensions */ = {
@@ -282,6 +285,7 @@
 				1F98A9BD24A8C3A20028C8D0 /* DateHandler.swift in Sources */,
 				1F7E185224A77B3C00A5903A /* DailyTableViewCell.swift in Sources */,
 				1F410F1124A75617000B0285 /* DailyModel.swift in Sources */,
+				1FD2BFDB24AC8E10008FC75D /* storageManager.swift in Sources */,
 				1F11B9F224A73CFF00B931AA /* AppDelegate.swift in Sources */,
 				1F11B9F424A73CFF00B931AA /* SceneDelegate.swift in Sources */,
 				1F11B9FC24A73CFF00B931AA /* DailyCalendarApp.xcdatamodeld in Sources */,

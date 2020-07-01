@@ -8,6 +8,7 @@
 
 import UIKit
 import FSCalendar
+import RealmSwift
 
 extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
@@ -15,7 +16,7 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
         
         let selectDate = setDateFormatter(date: date)
 
-        filterDailiesForCalendar(selectDate, dailies: dailies)
+        filterDailiesForCalendar(selectDate: selectDate)
         
         isSelectedDate = false
     }
@@ -38,7 +39,7 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
     }
     
         
-    func filterDailiesForCalendar(_ selectDate: String, dailies: [Daily]) {
+    func filterDailiesForCalendar(selectDate: String) {
         filteredDailies = filterDailiesListDate(selectDate: selectDate)
         tableView.reloadData()
     }
@@ -47,10 +48,12 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
         let sortedDailiesList = dailies.filter({
             let date = Date(timeIntervalSince1970: TimeInterval($0.date_start))
             
-            return setDateFormatter(date: date) == selectDate
+            return self.setDateFormatter(date: date) == selectDate
         })
         
-        return sortedDailiesList
+        let result = Array(sortedDailiesList)
+        
+        return result
     }
 
     func setDateFormatter(date: Date) -> String {
