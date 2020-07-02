@@ -34,8 +34,12 @@ class ViewController: UIViewController {
         tableView.isHidden = true
 
         calendar.delegate = self
-        tableView.reloadData()
         tableView.tableFooterView = UIView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -53,5 +57,10 @@ class ViewController: UIViewController {
         
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    func reloadData() {
+        calendar.reloadData()
+        tableView.reloadData()
     }
 }
