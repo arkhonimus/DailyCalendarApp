@@ -26,9 +26,14 @@ class NewDailyViewController: UIViewController {
         super.viewDidLoad()
         updateSaveButtonState()
     }
+    @IBAction func cancelButtonAction(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func saveNewDaily(_ sender: Any) {
-        let isTimeInData = realm.objects(Daily.self).filter({ $0.date_start == Int(self.dateDaily.date.timeIntervalSince1970 )}).first
+        let DH = DateHandler.shared
+        let date = DH.setDate(dailyDate: Int(self.dateDaily.date.timeIntervalSince1970 ))
+        let isTimeInData = realm.objects(Daily.self).filter({ DH.setDate(dailyDate: $0.date_start) == date}).first
         
         if (isTimeInData?.name.count) != nil {
             showAlert(title: "Событие на данное время уже существует", message: "")

@@ -13,6 +13,7 @@ import RealmSwift
 class ViewController: UIViewController {
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var isSelectedDateInfo: UILabel!
     
     var isSelectedDate: Bool = true
     
@@ -28,9 +29,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         dailies = realm.objects(Daily.self)
+        
+        isSelectedDateInfo.isHidden = false
+        tableView.isHidden = true
 
         calendar.delegate = self
         tableView.tableFooterView = UIView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        reloadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,5 +57,10 @@ class ViewController: UIViewController {
         
         alert.addAction(okAction)
         present(alert, animated: true)
+    }
+    
+    func reloadData() {
+        calendar.reloadData()
+        tableView.reloadData()
     }
 }

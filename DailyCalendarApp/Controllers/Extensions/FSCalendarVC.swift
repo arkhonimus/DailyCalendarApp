@@ -14,6 +14,9 @@ extension ViewController: FSCalendarDataSource, FSCalendarDelegate {
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         isSelectedDate = true
         
+        isSelectedDateInfo.isHidden = true
+        tableView.isHidden = false
+        
         let selectDate = setDateFormatter(date: date)
 
         filterDailiesForCalendar(selectDate: selectDate)
