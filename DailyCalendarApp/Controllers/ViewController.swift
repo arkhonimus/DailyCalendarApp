@@ -30,7 +30,9 @@ class ViewController: UIViewController {
         dailies = realm.objects(Daily.self)
 
         calendar.delegate = self
+        tableView.reloadData()
         tableView.tableFooterView = UIView()
+        print("Main VC")
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

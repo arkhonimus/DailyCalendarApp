@@ -26,6 +26,9 @@ class NewDailyViewController: UIViewController {
         super.viewDidLoad()
         updateSaveButtonState()
     }
+    @IBAction func cancelButtonAction(_ sender: UIBarButtonItem) {
+        dismiss(animated: true, completion: nil)
+    }
     
     @IBAction func saveNewDaily(_ sender: Any) {
         let isTimeInData = realm.objects(Daily.self).filter({ $0.date_start == Int(self.dateDaily.date.timeIntervalSince1970 )}).first

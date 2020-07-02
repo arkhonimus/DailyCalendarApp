@@ -271,6 +271,11 @@
                         <viewLayoutGuide key="safeArea" id="nju-lN-KZ3"/>
                     </view>
                     <navigationItem key="navigationItem" id="Cxb-iy-seh">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Ek1-J6-6E5">
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="Yv6-y9-PQr" id="K14-zx-HEG"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="ujn-J3-KJh">
                             <connections>
                                 <action selector="saveNewDaily:" destination="Yv6-y9-PQr" id="5ZS-35-JhT"/>
@@ -309,6 +314,7 @@
         <!--Navigation Controller-->
         <scene sceneID="0N9-Rm-aNg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1J-j7-SOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="GKe-TI-GXV" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="kTd-9Z-5cW"/>
@@ -317,11 +323,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VcX-Yx-48F">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Yv6-y9-PQr" kind="relationship" relationship="rootViewController" id="IAf-Mb-jLM"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="F1J-j7-SOp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3153.6231884057975" y="-152.00892857142856"/>
         </scene>
