@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DailyInfoViewController: UIViewController {
+class InfoDailyViewController: UIViewController {
     @IBOutlet weak var dailyInfoName: UILabel!
     @IBOutlet weak var dailyInfoDate: UILabel!
     @IBOutlet weak var dailyInfoDescription: UILabel!
@@ -17,7 +17,7 @@ class DailyInfoViewController: UIViewController {
     
     var daily: Daily = Daily(id: 0,
                              name: "",
-                             description: "",
+                             descriptionDaily: "",
                              date_start: 0,
                              date_finish: 0)
     
@@ -25,7 +25,7 @@ class DailyInfoViewController: UIViewController {
         super.viewDidLoad()
  
         dailyInfoName.text = daily.name
-        dailyInfoDescription.text = daily.description
+        dailyInfoDescription.text = daily.descriptionDaily
         dailyInfoDate.text =  "\(DC.setDate(dailyDate: daily.date_start)) - \(DC.setDate(dailyDate: daily.date_finish))"
     }
 

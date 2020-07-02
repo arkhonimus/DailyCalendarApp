@@ -8,22 +8,27 @@
 
 import UIKit
 import FSCalendar
+import RealmSwift
 
 class ViewController: UIViewController {
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var tableView: UITableView!
     
-    let dailies = Daily.getDailies()
-    var filteredDailies: [Daily] = [Daily]()
     var isSelectedDate: Bool = true
-    var dataDailies = Array(repeating: Daily(id: 0,
+    
+    var dailies: Results<Daily>!
+    var eventsOfSelectedDay: [Daily] = [Daily]()
+    var eventsDaily = Array(repeating: Daily(id: 0,
                                              name: "",
-                                             description: "",
-                                             date_start: 0, date_finish: 0), count: 24)
+                                             descriptionDaily: "",
+                                             date_start: 0,
+                                             date_finish: 0), count: 24)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dailies = realm.objects(Daily.self)
+
         calendar.delegate = self
         tableView.tableFooterView = UIView()
     }
@@ -31,9 +36,17 @@ class ViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "dailyInfo" {
             if let indexPath = tableView.indexPathForSelectedRow {
-                let dailyInfo = segue.destination as! DailyInfoViewController
-                dailyInfo.daily = dataDailies[indexPath.row]
+                let dailyInfo = segue.destination as! InfoDailyViewController
+                dailyInfo.daily = eventsDaily[indexPath.row]
             }
         }
+    }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "Ok", style: .default)
+        
+        alert.addAction(okAction)
+        present(alert, animated: true)
     }
 }
